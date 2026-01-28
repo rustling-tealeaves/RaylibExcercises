@@ -7,7 +7,12 @@ namespace Pong
     {
         static void Main(string[] args)
         {
-            Raylib.InitWindow(800, 600, "Thine Fancy Application for Sparing Monitors");
+            // Declaring variables for the three different corners of the triangle
+            Vector2 cornerA;
+            Vector2 cornerB;
+            Vector2 cornerC;
+
+            Raylib.InitWindow(800, 800, "Thine Fancy Application for Sparing Monitors");
             Raylib.SetTargetFPS(30);
             while (Raylib.WindowShouldClose() == false)
             {
