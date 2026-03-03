@@ -3,7 +3,7 @@ using Raylib_cs;
 
 namespace Pong
 {
-    internal class Program
+    internal class Pong
     {
         static void Main(string[] args)
         {

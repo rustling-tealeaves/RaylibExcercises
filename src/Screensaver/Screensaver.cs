@@ -1,9 +1,9 @@
 ﻿using System.Numerics;
 using Raylib_cs;
 
-namespace Pong
+namespace Screensaver
 {
-    internal class Program
+    internal class Screensaver
     {
         static void Main(string[] args)
         {
