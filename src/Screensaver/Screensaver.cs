@@ -7,17 +7,29 @@ namespace Screensaver
     {
         static void Main(string[] args)
         {
-            // Declaring variables for the three different corners of the triangle
-            // Also defining their locations
-            Vector2 cornerA = new Vector2 (Raylib.GetScreenWidth()/2, 40);
-            Vector2 cornerB = new Vector2 (40, Raylib.GetScreenHeight()/2);
-            Vector2 cornerC = new Vector2(Raylib.GetScreenWidth() - 40, (float)(Raylib.GetScreenHeight() * 0.75));
-
             Raylib.InitWindow(800, 800, "Thine Fancy Application for Sparing Monitors");
             Raylib.SetTargetFPS(30);
+
+            // Declaring variables for the three different corners of the triangle
+            // Also defining their locations
+            Vector2 cornerA = new (Raylib.GetScreenWidth()/2, 40);
+            Vector2 cornerB = new (40, Raylib.GetScreenHeight()/2);
+            Vector2 cornerC = new (Raylib.GetScreenWidth() - 40, (float)(Raylib.GetScreenHeight() * 0.75));
+
             while (Raylib.WindowShouldClose() == false)
             {
                 Raylib.BeginDrawing();
+
+                // Clear the screen with black
+                Raylib.ClearBackground(Color.Black);
+
+                // Draw a green line from A to B
+                Raylib.DrawLineV(cornerA, cornerB, Color.Green);
+                // Draw a yellow line from B to C
+                Raylib.DrawLineV(cornerB, cornerC, Color.Yellow);
+                // Draw a light blue line from C to A
+                Raylib.DrawLineV(cornerC, cornerA, Color.SkyBlue);
+
                 Raylib.EndDrawing();
             }
             Raylib.CloseWindow();
