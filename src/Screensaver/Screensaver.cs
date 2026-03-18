@@ -12,9 +12,17 @@ namespace Screensaver
 
             // Declaring variables for the three different corners of the triangle
             // Also defining their locations
-            Vector2 cornerA = new (Raylib.GetScreenWidth()/2, 40);
-            Vector2 cornerB = new (40, Raylib.GetScreenHeight()/2);
-            Vector2 cornerC = new (Raylib.GetScreenWidth() - 40, (float)(Raylib.GetScreenHeight() * 0.75));
+            Vector2 cornerA = new(Raylib.GetScreenWidth()/2, 40);
+            Vector2 cornerB = new(40, Raylib.GetScreenHeight()/2);
+            Vector2 cornerC = new(Raylib.GetScreenWidth() - 40, (float)(Raylib.GetScreenHeight() * 0.75));
+
+            // Declaring a speed variable
+            float speed = 2;
+            // Declaring variables for the directions of the three points
+            // Also defining the directions
+            Vector2 dirA = new(1, 1);
+            Vector2 dirB = new(1, -1);
+            Vector2 dirC = new(-1, 1);
 
             while (Raylib.WindowShouldClose() == false)
             {
