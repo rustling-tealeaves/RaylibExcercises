@@ -41,10 +41,38 @@ namespace Screensaver
                 // Moving cornerA
                 cornerA = cornerA + dirA * speed * Raylib.GetFrameTime();
                 // and making sure it doesn't escape
+                if (cornerA.X < 0 || cornerA.X > Raylib.GetScreenWidth())
+                {
+                    dirA.X = dirA.X * -1.0f;
+                }
+                if (cornerA.Y < 0 || cornerA.Y > Raylib.GetScreenHeight())
+                {
+                    dirA.Y = dirA.Y * -1.0f;
+                }
+
                 // Moving cornerB
                 cornerB = cornerB + dirB * speed * Raylib.GetFrameTime();
+                // and making sure it doesn't escape
+                if (cornerB.X < 0 || cornerB.X > Raylib.GetScreenWidth())
+                {
+                    dirB.X = dirB.X * -1.0f;
+                }
+                if (cornerB.Y < 0 || cornerB.Y > Raylib.GetScreenHeight())
+                {
+                    dirB.Y = dirB.Y * -1.0f;
+                }
+
                 // Moving cornerC
                 cornerC = cornerC + dirC * speed * Raylib.GetFrameTime();
+                // and making sure it doesn't escape
+                if (cornerC.X < 0 || cornerC.X > Raylib.GetScreenWidth())
+                {
+                    dirC.X = dirC.X * -1.0f;
+                }
+                if (cornerC.Y < 0 || cornerC.Y > Raylib.GetScreenHeight())
+                {
+                    dirC.Y = dirC.Y * -1.0f;
+                }
 
                 Raylib.EndDrawing();
             }
