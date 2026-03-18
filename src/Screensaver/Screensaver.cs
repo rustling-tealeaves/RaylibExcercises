@@ -17,7 +17,7 @@ namespace Screensaver
             Vector2 cornerC = new(Raylib.GetScreenWidth() - 40, (float)(Raylib.GetScreenHeight() * 0.75));
 
             // Declaring a speed variable
-            float speed = 2;
+            float speed = 20;
             // Declaring variables for the directions of the three points
             // Also defining the directions
             Vector2 dirA = new(1, 1);
@@ -37,6 +37,14 @@ namespace Screensaver
                 Raylib.DrawLineV(cornerB, cornerC, Color.Yellow);
                 // Draw a light blue line from C to A
                 Raylib.DrawLineV(cornerC, cornerA, Color.SkyBlue);
+
+                // Moving cornerA
+                cornerA = cornerA + dirA * speed * Raylib.GetFrameTime();
+                // and making sure it doesn't escape
+                // Moving cornerB
+                cornerB = cornerB + dirB * speed * Raylib.GetFrameTime();
+                // Moving cornerC
+                cornerC = cornerC + dirC * speed * Raylib.GetFrameTime();
 
                 Raylib.EndDrawing();
             }
