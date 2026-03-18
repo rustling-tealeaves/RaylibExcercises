@@ -17,7 +17,7 @@ namespace Screensaver
             Vector2 cornerC = new(Raylib.GetScreenWidth() - 40, (float)(Raylib.GetScreenHeight() * 0.75));
 
             // Declaring a speed variable
-            float speed = 20;
+            float speed = 50;
             // Declaring variables for the directions of the three points
             // Also defining the directions
             Vector2 dirA = new(1, 1);
